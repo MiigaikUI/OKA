@@ -18,7 +18,8 @@ class Contact(models.Model):
         "Фото",
         upload_to="contact/",
         help_text="Фото участника",
-        blank=True,
+        blank=False,
+        default='contact/default.jpg'
     )
     role = models.CharField(
         "Роль",
@@ -33,9 +34,21 @@ class Contact(models.Model):
         blank=False,
     )
 
+    @classmethod
+    def get_current(cls):
+        member_left = []
+        member_right = []
+        for index, member in enumerate(cls.objects.all()):
+            print(member)
+            if index % 2 == 0:
+                member_left.append(member)
+            else:
+                member_right.append(member)
+        return member_left, member_right
+
     class Meta():
         verbose_name_plural = "Команда"
-        verbose_name = "Участник"
+        verbose_name = "Участника"
 
 
 class About(models.Model):
@@ -50,8 +63,8 @@ class About(models.Model):
 
     @classmethod
     def get_current(cls):
-        result = cls.objects.filter(status=True)
-        return result.values()[0]['html']
+        result = cls.objects.all().filter(status=1)
+        return result.first().html
 
     class Meta():
         verbose_name_plural = "описания 'О проекте'"

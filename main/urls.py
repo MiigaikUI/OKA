@@ -7,6 +7,6 @@ from main import views
 urlpatterns = [
     path('', views.MapView.as_view(), name="map"),
     path('about/', views.AboutView.as_view(), name="about"),
-    path('', views.MapView.as_view(), name="team"),
+    path('team/', views.TeamView.as_view(), name="team"),
     path('', views.MapView.as_view(), name="partners"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
