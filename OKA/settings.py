@@ -16,6 +16,7 @@ ip = socket.gethostbyname(hostname)
 ALLOWED_HOSTS = [ip, '127.0.0.1']
 
 INSTALLED_APPS = [
+    'main',
     'admin_interface',
     'colorfield',
     'django.contrib.admin',
@@ -88,7 +89,7 @@ USE_I18N = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
-    '/static/',
+    'templates/static',
 )
 
 MEDIA_URL = '/media/'
