@@ -17,5 +17,3 @@ function menuOpen() {
         menu[i].classList.toggle("open");
     }
 }
-
-alert('hi');
