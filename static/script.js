@@ -1,3 +1,10 @@
+function menuOpen() {
+    var menu = document.querySelectorAll(".side-menu");
+    for (i = 0; i <= menu.length; i++) {
+        menu[i].classList.toggle("open");
+    }
+}
+
 const details = document.querySelectorAll("details");
 
 details.forEach((targetDetail) => {
@@ -11,9 +18,3 @@ details.forEach((targetDetail) => {
     });
 });
 
-function menuOpen() {
-    var menu = document.querySelectorAll(".side-menu");
-    for (i = 0; i <= menu.length; i++) {
-        menu[i].classList.toggle("open");
-    }
-}
