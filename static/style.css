@@ -201,9 +201,7 @@
         display: block;
         /* у summary по умолчанию свойство display в значении list-item, потому поддерживается свойство list-style */
         width: 10em;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
+        
         /* подводка точками или тире часто используется для элементов, с которыми пользователю предлагается взаимодействовать, можно заменить на text-decoration */
         outline-style: none;
         /* удалить обводку при фокусе */
