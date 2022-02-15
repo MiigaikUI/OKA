@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Contact, About
-
+from .models import Contact, About, Partners
 
 
 @admin.register(Contact)
@@ -9,8 +8,12 @@ class ContactAdmin(admin.ModelAdmin):
 
 
 @admin.register(About)
-class ContactAdmin(admin.ModelAdmin):
+class AboutAdmin(admin.ModelAdmin):
     list_display = ('status',)
+
+@admin.register(Partners)
+class PartnersAdmin(admin.ModelAdmin):
+    list_display = ('name',)
 
 
 # Register your models here.

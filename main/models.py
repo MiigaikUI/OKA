@@ -50,6 +50,44 @@ class Contact(models.Model):
         verbose_name_plural = "Команда"
         verbose_name = "Участника"
 
+class Partners(models.Model):
+    name = models.CharField(
+        "Название",
+        max_length=256,
+        help_text="Название партнёра",
+        blank=False,
+    )
+
+    img = models.ImageField(
+        "Фото",
+        upload_to="partners/",
+        help_text="Фото партнёра",
+        blank=False,
+        default='partners/default.jpg'
+    )
+    url = models.URLField(
+        "Ссылка",
+        max_length=256,
+        help_text="Описание участника",
+        blank=False,
+    )
+
+    @classmethod
+    def get_current(cls):
+        partners_left = []
+        partners_right = []
+        for index, partner in enumerate(cls.objects.all()):
+            print(partner)
+            if index % 2 == 0:
+                partners_left.append(partner)
+            else:
+                partners_right.append(partner)
+        return partners_left, partners_right
+
+    class Meta():
+        verbose_name_plural = "Партнёры"
+        verbose_name = "Партнёра"
+
 
 class About(models.Model):
     status = models.BooleanField(

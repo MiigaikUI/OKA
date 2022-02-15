@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-
-from OKA.settings import MEDIA_URL
-from .models import About, Contact
+from .models import About, Contact, Partners
 
 
 class MapView(View):
@@ -19,5 +17,11 @@ class AboutView(View):
 class TeamView(View):
     def get(self, request):
         members = Contact.get_current()
-        print(members)
         return render(request, 'team.html', {"title": "Team", "members_left": members[0], "members_right": members[1]})
+
+
+class PartnersView(View):
+    def get(self, request):
+        partners = Partners.get_current()
+        print(partners)
+        return render(request, 'partners.html', {"title": "Partners", "partners_left": partners[0], "partners_right": partners[1]})
