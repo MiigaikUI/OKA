@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/OKA.iml" filepath="$PROJECT_DIR$/.idea/OKA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/OKA_AS.iml" filepath="$PROJECT_DIR$/.idea/OKA_AS.iml" />
     </modules>
   </component>
 </project>

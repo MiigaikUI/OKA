@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}{{title}}{% endblock %}
+{% block content%}
+<div class="content-wrapper">
+    <div class="content-heading">Команда проекта</div>
+    <div class="content">
+        <div class="team-block">
+            <div class="team-block-row">
+                {% for member in members_left %}
+                <div class="team-block-member">
+                    <div>
+                        {% if member.img %}
+                        <img src="{{ member.img.url }}" class="team-block-member__img" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="team-block-member-info">
+                        <div class="team-block-member__heading">
+                           {{ member.first_name}} {{ member.last_name}}
+                        </div>
+                        <div class="team-block-member__sub">{{ member.role }}</div>
+                        <div class="team-block-member__text">
+                            {{ member.description }}
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+            <div class="team-block-row">
+                {% for member in members_right %}
+                <div class="team-block-member">
+                    <div>
+                        {% if member.img %}
+                        <img src="{{ member.img.url }}" class="team-block-member__img" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="team-block-member-info">
+                        <div class="team-block-member__heading">
+                           {{ member.first_name}} {{ member.last_name}}
+                        </div>
+                        <div class="team-block-member__sub">{{ member.role }}</div>
+                        <div class="team-block-member__text">
+                            {{ member.description }}
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
