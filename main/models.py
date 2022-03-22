@@ -12,7 +12,7 @@ class Contact(models.Model):
         "Фамилия",
         max_length=32,
         help_text="Фамилия участника",
-        blank=False,
+        blank=True,
     )
     img = models.ImageField(
         "Фото",
@@ -21,9 +21,9 @@ class Contact(models.Model):
         blank=False,
         default='contact/default.jpg'
     )
-    role = models.CharField(
+    role = models.TextField(
         "Роль",
-        max_length=64,
+        max_length=1024,
         help_text="Роль участника в проекте",
         blank=False,
     )
