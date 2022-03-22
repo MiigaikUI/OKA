@@ -31,7 +31,7 @@ class Contact(models.Model):
         "Описание",
         max_length=256,
         help_text="Описание участника",
-        blank=False,
+        blank=True,
     )
 
     @classmethod
