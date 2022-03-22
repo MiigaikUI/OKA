@@ -249,12 +249,10 @@
         color: white;
         font-size: 1.5rem;
         line-height: 2rem;
-        max-width: 90%;
         background-color: white;
         color: #000;
-        overflow-y: scroll;
         font-family: 'Montserrat', sans-serif;
-        max-height: 40rem;
+        height: 100%;
     }
     
     .header {
