@@ -6,7 +6,7 @@ class Contact(models.Model):
         "Имя",
         max_length=32,
         help_text="Имя участника",
-        blank=False,
+        blank=True,
     )
     last_name = models.CharField(
         "Фамилия",
@@ -18,14 +18,14 @@ class Contact(models.Model):
         "Фото",
         upload_to="contact/",
         help_text="Фото участника",
-        blank=False,
+        blank=True,
         default='contact/default.jpg'
     )
     role = models.TextField(
         "Роль",
-        max_length=1024,
+        max_length=4096,
         help_text="Роль участника в проекте",
-        blank=False,
+        blank=True,
     )
     description = models.CharField(
         "Описание",
