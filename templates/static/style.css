@@ -1,4 +1,4 @@
-    html {
+  html {
         animation: ani 3s;
         font-family: 'Montserrat', sans-serif;
         font-family: 'Open Sans', sans-serif;
@@ -201,6 +201,7 @@
         display: block;
         /* у summary по умолчанию свойство display в значении list-item, потому поддерживается свойство list-style */
         width: 10em;
+        
         /* подводка точками или тире часто используется для элементов, с которыми пользователю предлагается взаимодействовать, можно заменить на text-decoration */
         outline-style: none;
         /* удалить обводку при фокусе */
@@ -248,12 +249,10 @@
         color: white;
         font-size: 1.5rem;
         line-height: 2rem;
-        max-width: 90%;
         background-color: white;
         color: #000;
-        overflow-y: scroll;
         font-family: 'Montserrat', sans-serif;
-        max-height: 40rem;
+        height: 100%;
     }
     
     .header {
